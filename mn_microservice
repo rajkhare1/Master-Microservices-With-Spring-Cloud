@@ -1,0 +1,25 @@
+07-01-2024:
+===========
+Web sevice?
+
+  html is not the format which is designed to application to application iteraction.
+
+  WEB SERVICE - W3C DEFINITION
+   "software sysetm desined to support interoperable machine-to-machine ineraction over a network."
+
+   3-KEYS
+   * Desined for machine-to-machine(or application-to-application) iteraction
+   * Should be interoperable - Not platform dependent
+   * Should allow communication over a network
+--------------------------------------------------------------------------------------------------------------
+22-02-2024 THU
+-------------
+
+sec3: initialize a REST API project with Spring Boot:
+========================
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.2.3&packaging=jar&jvmVersion=17&groupId=com.rajkhare.rest.webservices&artifactId=restfult-web-services&name=restfult-web-services&description=Demo%20project%20for%20Spring%20Boot&packageName=com.rajkhare.rest.webservices.restfult-web-services&dependencies=web,data-jpa,h2,devtools
+
+----------------------
+
+
+
