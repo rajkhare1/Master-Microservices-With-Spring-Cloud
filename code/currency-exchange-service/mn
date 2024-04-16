@@ -1,0 +1,35 @@
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "create table currency_exchange (conversion_multiple numeric(38,2), id bigint not null, environment varchar(255), [*]from varchar(255), to varchar(255), primary key (id))"; 
+expected "identifier"; SQL statement:
+
+--> this is due to if we are using some keywords in entity.
+
+
+create table currency_exchange (conversion_multiple numeric(38,2), id bigint not null, environment varchar(255), from varchar(255), to varchar(255), primary key (id)) [42001-224]
+
+Hibernate: select ce1_0.id,ce1_0.conversion_multiple,ce1_0.environment,ce1_0.currency_from,ce1_0.currency_to from currency_exchange ce1_0 where ce1_0.currency_from=? and ce1_0.currency_to=?
+-------
+
+URL
+
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8000/currency-exchange/from/AUD/to/INR
+
+Response Structure
+
+    {
+      "id": 10001,
+      "from": "USD",
+      "to": "INR",
+      "conversionMultiple": 65.00,
+      "quantity": 10,
+      "totalCalculatedAmount": 650.00,
+      "environment": "8000 instance-id"
+    }
+
+====================
+
+
+
+
+	
