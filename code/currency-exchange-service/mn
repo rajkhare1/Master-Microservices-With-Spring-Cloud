@@ -28,7 +28,13 @@ Response Structure
     }
 
 ====================
+Use maxAttempts instead of maxRetryAttempts
 
+    resilience4j.retry.instances.sample-api.maxAttempts=5 #NEW
+    #resilience4j.retry.instances.sample-api.maxRetryAttempts=5 #OLD
+    
+ =====================
+    
 
 
 
