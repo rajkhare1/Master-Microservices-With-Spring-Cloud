@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rajkhare.currencyexchangeservice.bean.CurrencyExchange;
 import com.rajkhare.currencyexchangeservice.dao.CurrencyExchangeRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class CurrencyExchangeController {
 	
@@ -23,6 +26,8 @@ public class CurrencyExchangeController {
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public ResponseEntity<CurrencyExchange> getExchangeValue(@PathVariable String from,
 			@PathVariable String to){
+		
+		log.info("getExchangeValue called with {} to {}",from,to);
 		
 		String port = environment.getProperty("local.server.port");
 		
